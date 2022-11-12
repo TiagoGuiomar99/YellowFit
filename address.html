@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="icon/favicon.svg">
+    <script src="https://use.fontawesome.com/7b6b109675.js"></script>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'><link rel="stylesheet" href="js/main.js">
+    <title>Yellow Fit | Carrinho</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+function saveTextAsFile() {
+    var total = localStorage.getItem('Total', total);
+    var textToWrite = 
+    'Referência de Encomenda:' + '\n' + '\n' +
+    '-----------------------------------------------------------' + '\n' + 
+    
+    'Nome: ' + document.getElementById("firstname").value + '\n' +
+    'País: ' + document.getElementById("add-country").value + '\n' +
+    'Morada: ' + document.getElementById("newStreet").value + '\n' +
+    'Código Postal: ' + document.getElementById("newZipCode").value + '\n' +
+    'Telemóvel: ' + document.getElementById("newPhone").value + '\n' +
+    'E-mail: ' + document.getElementById("email").value + '\n' +
+    'NIF: ' + document.getElementById("NIF").value + '\n' + '\n' +
+    'Artigos Comprados:' + '\n' +
+    '------------------------------------------------------------' + '\n' +
+    'Preço: ' + total + ' euros';
+
+    
+
+    
+    var textFileAsBlob = new Blob([textToWrite], {
+        type: 'text/plain'
+    });
+    var fileNameToSaveAs = document.getElementById("inputFileNameToSaveAs").value;
+
+    var downloadLink = document.createElement("a");
+    downloadLink.download = fileNameToSaveAs;
+
+    if(window.webkitURL != null) {
+        downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
+    }
+    downloadLink.click();
+}   
+    </script>
+    
+</head>
+<body style="background-color: #fff;">  
+    <!--navbar-->
+    <nav id="navbar">
+        <div class="navbar">
+            <a href="index.html" id="logo"><img src="icon/logo.svg" alt="Logo" ></a>
+            <ul>
+                <a href="services.html"><li>Serviços</li></a>
+                <a href="shop.html"><li>Loja</li></a>
+                <a href="contacts.html"><li>Contactos</li></a>
+                <a href="login.html"><li><i class="fa fa-user-circle-o" aria-hidden="true"></i></li></a>
+                <a href="cart.html"><li><span class="iconify" data-icon="feather-shopping-cart" data-width="20px" data-height="20px"></span></li></a>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="content-100vh">
+    
+        <div class="add-address">
+            <div class="add-address-title">
+                <p>Adicionar uma morada nova</p>
+            </div>
+            <div class="add-address-street">
+                <p>Nome:</p>
+                <input type="text" id="firstname" required>
+                <input type="text" id="preco" style="display: none;">
+            </div>
+            <div class="add-address-street">
+                <p>Email:</p>
+                <input type="email" id="email" required>
+            </div>
+            <div class="add-address-street">
+                <p>NIF:</p>
+                <input type="number" id="NIF" required>
+            </div>
+            <div class="add-address-country">
+                <p>País/Região</p>
+                <select name="country" id="add-country" required>
+                    <option value="Portugal" selected>Portugal</option>
+                    <option value="Espanha">Espanha</option>
+                    <option value="Franca">França</option>
+                    <option value="Alemanha">Alemanha</option>
+                    <option value="Reino Unido">Reino Unido</option>
+                </select>
+            </div>
+            <div class="add-address-street">
+                <p>Morada 1</p>
+                <input type="text" id="newStreet" required>
+            </div>
+            <div class="add-address-Local">
+                <p>Localidade</p>
+                <input type="text" id="newLocal" required>
+            </div>
+            <div class="add-address-zipcode">
+                <p>Código Postal</p>
+                <input type="zipcode" id="newZipCode" required>
+            </div>
+            <div class="add-address-phone">
+                <p>Número de Telemóvel</p>
+                <input type="phone" id="newPhone" required>
+            </div>
+
+            <a href="index.html"><button id="AddAddress" onclick="saveTextAsFile()">Enviar Fatura</button></a>
+            <input type="text" id="inputFileNameToSaveAs" value="Fatura" style="display: none;">
+        </div>
+    </div>
+
+    <!--footer-->
+    <footer>
+        <div class="footer-info">
+            <div class="footer-social">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+                <i class="fa fa-whatsapp" aria-hidden="true"></i>
+            </div>
+            <div class="footer-copy">
+                <p>&copy; 2021 YellowFit | Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

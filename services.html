@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="icon/favicon.svg">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <script src="https://use.fontawesome.com/7b6b109675.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link rel="stylesheet" href="js/main.js">
+    <title>Yellow Fit | Serviços</title>
+    <link href='lib/main.css' rel='stylesheet' />
+    <script src='lib/main.js'></script>
+    <script src='lib/locales/pt.js'></script>
+    
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+          var calendarEl = document.getElementById('calendar');
+          var vaga;
+          var calendar = new FullCalendar.Calendar(calendarEl, {
+            locale: 'pt',
+            headerToolbar: {
+              left: 'prev,next today',
+              center: 'title',
+              right: 'dayGridMonth,timeGridWeek,timeGridDay'
+            },
+            
+            //  initialDate: '',
+            
+            navLinks: true, // can click day/week names to navigate views
+            selectable: true,
+            selectMirror: true,
+            select: function(arg) {
+              var title = prompt('Event Title:');
+              if (title) {
+                calendar.addEvent({
+                  title: title,
+                  start: arg.start,
+                  end: arg.end,
+                  allDay: arg.allDay
+                })
+              }
+              calendar.unselect()
+            },
+            eventClick: function(arg) {
+              if (confirm('')) {
+                var vaga = vaga--;
+              }
+            },
+            editable: true,
+            dayMaxEvents: true, // allow "more" link when too many events
+            events: [
+              {
+                title: 'HIIT',
+                start: '2021-06-21T16:00:00',
+                description: 'Lecture'
+              },
+              {
+                title: 'Crossfit',
+                start: '2021-06-22T16:00:00'
+              },
+              {
+                title: 'Body Attack',
+                start: '2021-06-23T16:00:00'
+              },
+              {
+                title: 'Pilates',
+                start: '2021-06-26T16:00:00'
+              },
+              {
+                title: 'Body Step',
+                start: '2021-06-11T16:00:00',
+              },
+              {
+                title: 'Body Balance',
+                start: '2021-06-21T10:30:00',
+                end: '2021-06-21T12:30:00'
+              },
+              {
+                title: 'RPM',
+                start: '2021-06-22T12:00:00'
+              },
+              {
+                title: 'BodyCombat',
+                start: '2021-06-24T14:30:00'
+              },
+              {
+                title: 'Yoga',
+                start: '2021-06-24T17:30:00'
+              },
+              {
+                title: 'BodyPump',
+                start: '2021-06-25T20:00:00'
+              },
+              {
+                title: 'Sprint',
+                start: '2021-06-25T11:00:00'
+              }
+              
+            ]
+          });
+          calendar.render();
+        });
+      
+      </script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav id="navbar">
+        <div class="navbar">
+            <a href="index.html" id="logo"><img src="icon/logo.svg" alt="Logo" ></a>
+            <ul>
+                <a href="services.html"><li>Serviços</li></a>
+                <a href="shop.html"><li>Loja</li></a>
+                <a href="contacts.html"><li>Contactos</li></a>
+                <a href="login.html"><li><i class="fa fa-user-circle-o" aria-hidden="true"></i></li></a>
+                <a href="cart.html"><li><span class="iconify" data-icon="feather-shopping-cart" data-width="20px" data-height="20px"></span></li></a>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Background Image -->
+    <div class="plans-bg">
+        <p class="plans-title-services">Planos</p>
+    </div>    
+
+    <!-- Plans section -->
+    <div class="service-plans">
+            <div class="plans-grid">
+
+                <div class="type-plan">
+                    <div class="type-plan-top">
+                        <p>Plano</p>
+                        <p>Semanal</p>
+                    </div>
+                    <div class="type-plan-price">
+                        <p>Por Apenas</p>
+                        <p>0,00€</p>
+                    </div>
+                    <div class="type-plan-text">
+                        <p>Aulas de Musculação e <br> aeróbicos</p>
+                        <p>Sem taxa de cancelamento</p>
+                        <p>ClassFit</p>
+                        <p>Acesso ilimitado nas redes</p>
+                    </div>
+                    <button class="join" id="weekly">Aderir</button>
+                </div>
+
+                <div class="type-plan">
+                    <div class="type-plan-top">
+                        <p>Plano</p>
+                        <p>Mensal</p>
+                    </div>
+                    <div class="type-plan-price">
+                        <p>Por Apenas</p>
+                        <p>0,00€</p>
+                    </div>
+                    <div class="type-plan-text">
+                        <p>Aulas de Musculação e <br> aeróbicos</p>
+                        <p>Sem taxa de cancelamento</p>
+                        <p>ClassFit</p>
+                        <p>Acesso ilimitado nas redes</p>
+                    </div>
+                    <button class="join" id="mensal">Aderir</button>
+                </div>
+
+                <div class="type-plan">
+                    <div class="type-plan-top">
+                        <p>Plano</p>
+                        <p>Trimestral</p>
+                    </div>
+                    <div class="type-plan-price">
+                        <p>Por Apenas</p>
+                        <p>0,00€</p>
+                    </div>
+                    <div class="type-plan-text">
+                        <p>Aulas de Musculação e <br> aeróbicos</p>
+                        <p>Sem taxa de cancelamento</p>
+                        <p>ClassFit</p>
+                        <p>Acesso ilimitado nas redes</p>
+                    </div>
+                    <button class="join" id="trimestral">Aderir</button>
+                </div>
+
+                <div class="type-plan">
+                    <div class="type-plan-top">
+                        <p>Plano</p>
+                        <p>Anual</p>
+                    </div>
+                    <div class="type-plan-price">
+                        <p>Por Apenas</p>
+                        <p>0,00€</p>
+                    </div>
+                    <div class="type-plan-text">
+                        <p>Aulas de Musculação e <br> aeróbicos</p>
+                        <p>Sem taxa de cancelamento</p>
+                        <p>ClassFit</p>
+                        <p>Acesso ilimitado nas redes</p>
+                    </div>
+                    <button class="join" id="anual">Aderir</button>
+                </div>
+            </div>
+    </div>
+    <div class="calendar-bg">
+        <p class="calendar-title-cont">As nossas aulas</p>
+        <div class="calendar-title">
+        </div>
+        <div class="calendar-margin">
+            <div id='calendar'></div>
+        </div>
+        
+    </div>
+    <p class="services-title">Serviços</p>
+    
+    <div class="goldfit-plan">
+        <div class="goldfit-plan-desc">
+            <div class="goldfit-plan-title">
+                <p>Gold Fit</p>
+            </div>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci tempore iusto aperiam pariatur porro aliquam doloribus, cupiditate nihil suscipit sapiente quis, fugiat dignissimos maiores blanditiis? Molestias, quidem rerum distinctio magni accusamus consectetur, cumque hic neque id esse dolorem quos eligendi voluptatum</p>
+            <button class="sign-button">Assinar</button>
+        </div>
+        <div class="goldfit-plan-img">
+            <img src="img/goldfit.png" alt="">
+        </div>
+    </div>
+
+    <div class="services-guide">
+        <div class="services-guide-cat">
+            <div class="goldfit">
+                <div class="goldfit-top">
+                    <p>Gold Fit</p>
+                </div>
+                <img src="img/classfit.jpg" alt="">
+                <div class="goldfit-bottom">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio aliquam minus odio incidunt explicabo ullam fugiat itaque quos error impedit!</p>
+                    <button class="reserve-class">Reservar Aula</button>
+                </div>
+                
+            </div>
+            <div class="classfit">
+                <div class="classfit-top">
+                    <p>Classfit</p>
+                </div>
+                <img src="img/classfit.jpg" alt="">
+                <div class="classfit-bottom">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio aliquam minus odio incidunt explicabo ullam fugiat itaque quos error impedit!</p>
+                    <button class="reserve-class-yellow">Reservar Aula</button>
+                </div>
+                
+            </div>
+            <div class="coaching">
+                <div class="classfit-top">
+                    <p>Coaching</p>
+                </div>
+                <img src="img/coaching.jpg" alt="">
+                <div class="classfit-bottom">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio aliquam minus odio incidunt explicabo ullam fugiat itaque quos error impedit!</p>
+                    <button class="reserve-class-yellow">Reservar Aula</button>
+                </div>
+            </div>
+            <div class="nutrition">
+                <div class="classfit-top">
+                    <p>Nutrição</p>
+                </div>
+                <img src="img/nutricao.jpg" alt="">
+                <div class="classfit-bottom">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio aliquam minus odio incidunt explicabo ullam fugiat itaque quos error impedit!</p>
+                    <button class="reserve-class-yellow">Reservar Aula</button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    
+    <footer>
+        <div class="footer-info">
+            <div class="footer-social">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+                <i class="fa fa-whatsapp" aria-hidden="true"></i>
+            </div>
+            <div class="footer-copy">
+                <p>&copy; 2021 YellowFit | Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
+
+

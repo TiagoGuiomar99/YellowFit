@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="icon/favicon.svg">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://use.fontawesome.com/7b6b109675.js"></script>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'><link rel="stylesheet" href="js/main.js">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>Yellow Fit | Login</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/register.js"></script>
+</head>
+<div>
+    <!--navbar-->
+    <nav id="navbar">
+        <div class="navbar">
+            <a href="index.html" id="logo"><img src="icon/logo.svg" alt="Logo" ></a>
+            <ul>
+                <a href="services.html"><li>Serviços</li></a>
+                <a href="shop.html"><li>Loja</li></a>
+                <a href="contacts.html"><li>Contactos</li></a>
+                <a href="login.html"><li><i class="fa fa-user-circle-o" aria-hidden="true"></i></li></a>
+                <a href="cart.html"><li><span class="iconify" data-icon="feather-shopping-cart" data-width="20px" data-height="20px"></span></li></a>
+            </ul>
+        </div>
+    </nav>
+
+    <!--Register-->
+
+    <div class="contant-100vh">
+        <div id="container">
+            <div id="cont">
+                <div id="login" class="comm">
+                    <h3 style="text-align: center;">Iniciar Sessão</h3>
+                    <input id="se" type="email" placeholder="E-mail" required/>
+                    <input id="sp" type="password" placeholder="Palavra-Passe" required/>
+                    <input class="continuar" type="submit" onclick="login()" value="Continuar"/>
+                    <hr>
+                    <!--<p style="margin-top: 15px;">-------------------ÉS NOVO CLIENTE?-------------------</p>-->
+                    <input class="create" type="button" onclick="location.href='register.html';" value="Criar Conta" />
+    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--footer-->
+    <footer>
+        <div class="footer-info">
+            <div class="footer-social">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+                <i class="fa fa-whatsapp" aria-hidden="true"></i>
+            </div>
+            <div class="footer-copy">
+                <p>&copy; 2021 YellowFit | Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

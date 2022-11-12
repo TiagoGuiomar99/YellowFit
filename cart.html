@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="icon/favicon.svg">
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <script src="https://use.fontawesome.com/7b6b109675.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'><link rel="stylesheet" href="js/main.js">
+    <title>Yellow Fit | Carrinho</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/store.js" async></script>
+</head>
+<body style="background-color: #fff;" onload="cartAddProdutos()">  
+    <!--navbar-->
+    <nav id="navbar">
+        <div class="navbar">
+            <a href="index.html" id="logo"><img src="icon/logo.svg" alt="Logo" ></a>
+            <ul>
+                <a href="services.html"><li>Serviços</li></a>
+                <a href="shop.html"><li>Loja</li></a>
+                <a href="contacts.html"><li>Contactos</li></a>
+                <a href="login.html"><li><i class="fa fa-user-circle-o" aria-hidden="true"></i></li></a>
+                <a href="cart.html"><li><span class="iconify" data-icon="feather-shopping-cart" data-width="20px" data-height="20px"></span></li></a>
+            </ul>
+        </div>
+    </nav>
+    
+
+    <div class="content-100vh">
+        
+        <div class="cart-margin">
+            <div class="cart-title">
+                <span class="iconify" data-icon="feather-shopping-cart" data-width="20px" data-height="20px"></span>
+                <p>Carrinho de Compras</p>
+            </div>
+            <div class="cart-info">
+                <div class="cart-info-top">
+                    <div class="cart-info-top-left">
+                        <p class="cart-prod">Produtos</p>
+                    </div>
+                    <div class="cart-info-top-right">
+                        <p class="cart-price">Preço/uni</p>
+                        <p class="cart-quant">Quantidade</p>
+                        <p class="cart-subTotal">Sub-Total</p>
+                        <p class="cart-remove">Remover</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cart-items">
+                <div class="cart-product-info">
+                    <div class="cart-product-info-left">
+                        <img src="img/produto2.jpg" alt="Produto">
+                        <p class="prod-name">Whey Protein Fusion 900 g</p>
+                    </div>
+                    <div class="cart-product-info-right">
+                        <p class="prod-price">17.99€</p>
+                        <input type="number" name="prod-quantity" class="prod-quantity" value="1">
+                        <p class="prod-subTotal">17.99€</p>
+                        <button class="remove-item-cart">
+                            <span class="iconify" data-icon="fa-solid:trash" data-inline="false" style="color: #707070;" data-height="16"></span>
+                        </button>
+                    </div>
+                </div>
+                
+                
+                <div class="cart-product-info">
+                    <div class="cart-product-info-left">
+                        <img src="img/produto1.jpg" alt="Produto">
+                        <p class="prod-name">Xtreme Whey Protein 2000 g + Oferta</p>
+                    </div>
+                    <div class="cart-product-info-right">
+                        <p class="prod-price">32.50€</p>
+                        <input type="number" name="prod-quantity" class="prod-quantity" value="1">
+                        <p class="prod-subTotal">32.50€</p>
+                        <button class="remove-item-cart"><span class="iconify" data-icon="fa-solid:trash" data-inline="false" style="color: #707070;" data-height="16"></span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cart-price-info">
+                <div class="cart-price-info-left">
+                    <input type="text" class="Coupon" placeholder="Inserir Cupão">
+                    <button class="ApplyCoupon">Aplicar</button>
+                </div>
+                <div class="cart-price-info-right">
+                    <div class="cart-price-info-SubTotal">
+                        <p>Sub-Total</p>
+                        <p class="priceSubTotal">50.49€</p>
+                    </div>
+                    <div class="cart-price-info-Discount">
+                        <p>Desconto</p>
+                        <p class="priceDiscount">-0,00€</p>
+                    </div>
+                    <div class="cart-price-info-Total">
+                        <p>Total</p>
+                        <p class="priceTotal">50.49€</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="submit-btn">
+                <a href="payment.html"><button type="submit" class="SubmitBuy">Continuar</button></a>
+            </div>
+
+        </div>
+    </div>
+
+    <!--footer-->
+    <footer>
+        <div class="footer-info">
+            <div class="footer-social">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+                <i class="fa fa-whatsapp" aria-hidden="true"></i>
+            </div>
+            <div class="footer-copy">
+                <p>&copy; 2021 YellowFit | Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
